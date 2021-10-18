@@ -2,7 +2,6 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from PyQt5 import QtWidgets
 
 class Window(QMainWindow):
   
@@ -18,6 +17,7 @@ class Window(QMainWindow):
         self.label.setGeometry(6, 4, 350, 70)   
         self.label.setStyleSheet("QLabel")
         self.label.setStyleSheet("border : 2px solid red")
+        self.label.setStyleSheet("background : pink")
         self.label.setFont(QFont('Arial', 15))
                                  
         bp = QPushButton(".", self)
