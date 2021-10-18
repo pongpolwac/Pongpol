@@ -14,8 +14,10 @@ class Window(QMainWindow):
        
     def function(self):
         self.label = QLabel(self)
-        self.label.setGeometry(5, 5, 350, 70)    
-        
+        self.label.setGeometry(5, 5, 350, 70)   
+        b1 = QPushButton("1", self)
+        b2 = QPushButton("2", self)
+
 
 App = QApplication(sys.argv)
 window = Window()
