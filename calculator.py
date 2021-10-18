@@ -49,12 +49,12 @@ class Window(QMainWindow):
         bmin.setGeometry(275, 200, 80, 40)
         bplus = QPushButton("+", self)
         bplus.setGeometry(275, 150, 80, 40)
-        pequ = QPushButton("=", self)
-        pequ.setGeometry(275, 300, 80, 40)
-        pcle = QPushButton("C", self)
-        pcle.setGeometry(5, 100, 200, 40)
-        pdel = QPushButton("Del", self)
-        pdel.setGeometry(210, 100, 145, 40)
+        bdiv = QPushButton("/", self)
+        bdiv.setGeometry(275, 300, 80, 40)
+        bcle = QPushButton("C", self)
+        bcle.setGeometry(5, 100, 200, 40)
+        bdel = QPushButton("Del", self)
+        bdel.setGeometry(210, 100, 145, 40)
 
         b0.clicked.connect(self.act0)
         b1.clicked.connect(self.act1)
@@ -66,10 +66,19 @@ class Window(QMainWindow):
         b7.clicked.connect(self.act7)
         b8.clicked.connect(self.act8)
         b9.clicked.connect(self.act9)
+        be.clicked.connect(self.actequ)
+        bmin.clicked.connect(self.actmin)
+        bdiv.clicked.connect(self.actdiv)
+        bmul.clicked.connect(self.actmul)
+        bplus.clicked.connect(self.actplus)
+        bp.clicked.connect(self.actp)
+        bcle.clicked.connect(self.actcle)
+        bdel.clicked.connect(self.actdel) 
 
     def act0(self):            
         text = self.label.text()
         self.label.setText(text + "0")
+
     def act1(self):
         text = self.label.text()
         self.label.setText(text + "1")
@@ -104,7 +113,29 @@ class Window(QMainWindow):
 
     def act9(self):
         text = self.label.text()
-        self.label.setText(text + "9")    
+        self.label.setText(text + "9")   
+
+    def actplus(self):
+        text = self.label.text()
+        self.label.setText(text + " + ")
+
+    def actmin(self):
+        text = self.label.text()
+        self.label.setText(text + " - ")
+
+    def actdiv(self):
+        text = self.label.text()
+        self.label.setText(text + " / ")
+
+    def actmul(self):
+        text = self.label.text()
+        self.label.setText(text + " * ")
+
+    def actp(self):
+        text = self.label.text()
+        self.label.setText(text + ".")     
+
+        
 
 
 
