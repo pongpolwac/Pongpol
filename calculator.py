@@ -147,31 +147,10 @@ class Window(QMainWindow):
     def actequ(self):
         equation = self.label.text()
         try:
-            if "+" in equation:
-                a,b = equation.split("+")  
-                result = float(a) + float(b)  
-                if result.is_integer():
-                    self.label.setText(str(int(result)))
-                else:    
-                    self.label.setText(str(result))
-            if "-" in equation:
-                a,b = equation.split("-")  
-                result = float(a) - float(b)  
-                if result.is_integer():
-                    self.label.setText(str(int(result)))
-                else:    
-                    self.label.setText(str(result))    
-            if "x" in equation:
-                a,b = equation.split("x")  
-                result = float(a) * float(b)
-                if result < 0 and result.is_integer():
-                    self.label.setText(str(int(result)))
-                if result > 0 and result.is_integer():
-                    self.label.setText(str(int(result)))     
-                else:    
-                    self.label.setText(str(result))            
+            ans = eval(equation)
+            self.label.setText(str(ans))          
         except Exception as e:
-            e="Can only execute 1 order once"
+            e="Error"
             self.label.setText(str(e))     
 
 
