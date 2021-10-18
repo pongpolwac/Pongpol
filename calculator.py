@@ -50,6 +50,17 @@ class Window(QMainWindow):
         bplus.setGeometry(275, 150, 80, 40)
         pequ = QPushButton("=", self)
         pequ.setGeometry(275, 300, 80, 40)
+        pcle = QPushButton("C", self)
+        pcle.setGeometry(5, 100, 200, 40)
+        pdel = QPushButton("Del", self)
+        pdel.setGeometry(210, 100, 145, 40)
+
+        b0.clicked.connect(self.act0)
+
+    def act0(self):            
+        text = self.label.text()
+        self.label.setText(text + "0")
+
 
 
 
