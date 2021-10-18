@@ -8,6 +8,7 @@ class Window(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setGeometry(450, 300, 100, 100)
+        self.setWindowTitle("Pongpol Calculator")
         self.function()
         self.show()
        
