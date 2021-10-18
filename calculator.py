@@ -133,11 +133,25 @@ class Window(QMainWindow):
 
     def actp(self):
         text = self.label.text()
-        self.label.setText(text + ".")     
+        self.label.setText(text + ".")    
 
-        
+    def actcle(self):
+        self.label.setText("")
 
+    def actdel(self):
+        text = self.label.text()
+        print(text[:len(text)-1])
+        self.label.setText(text[:len(text)-1])  
 
+    def actequ(self):
+        equation = self.label.text()
+        if "+" in equation:
+            a,b = equation.split("+")  
+            result = float(a) + float(b)  
+            if "." in str(result):
+                self.label.setText(str(result))
+            else:
+                self.label.setText(str(int(result)))   
 
 
 App = QApplication(sys.argv)
