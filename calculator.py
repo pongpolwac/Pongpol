@@ -17,6 +17,7 @@ class Window(QMainWindow):
         self.label.setGeometry(6, 4, 350, 70)   
         self.label.setStyleSheet("QLabel")
         self.label.setStyleSheet("border : 2px solid red")
+        self.label.setFont(QFont('Arial', 15))
                                  
         bp = QPushButton(".", self)
         bp.setGeometry(6, 300, 80, 40)
@@ -34,7 +35,7 @@ class Window(QMainWindow):
         b4.setGeometry(6, 200, 80, 40)
         b5 = QPushButton("5", self)
         b5.setGeometry(95, 200, 80, 40)
-        b6 = QPushButton("5", self)
+        b6 = QPushButton("6", self)
         b6.setGeometry(185, 200, 80, 40)
         b1 = QPushButton("1", self)
         b1.setGeometry(6, 150, 80, 40)
@@ -56,10 +57,54 @@ class Window(QMainWindow):
         pdel.setGeometry(210, 100, 145, 40)
 
         b0.clicked.connect(self.act0)
+        b1.clicked.connect(self.act1)
+        b2.clicked.connect(self.act2)
+        b3.clicked.connect(self.act3)
+        b4.clicked.connect(self.act4)
+        b5.clicked.connect(self.act5)
+        b6.clicked.connect(self.act6)
+        b7.clicked.connect(self.act7)
+        b8.clicked.connect(self.act8)
+        b9.clicked.connect(self.act9)
 
     def act0(self):            
         text = self.label.text()
         self.label.setText(text + "0")
+    def act1(self):
+        text = self.label.text()
+        self.label.setText(text + "1")
+
+    def act2(self):
+        text = self.label.text()
+        self.label.setText(text + "2")
+
+    def act3(self):
+        text = self.label.text()
+        self.label.setText(text + "3")
+
+    def act4(self):
+        text = self.label.text()
+        self.label.setText(text + "4")
+
+    def act5(self):
+        text = self.label.text()
+        self.label.setText(text + "5")
+
+    def act6(self):
+        text = self.label.text()
+        self.label.setText(text + "6")
+
+    def act7(self):
+        text = self.label.text()
+        self.label.setText(text + "7")
+
+    def act8(self):
+        text = self.label.text()
+        self.label.setText(text + "8")
+
+    def act9(self):
+        text = self.label.text()
+        self.label.setText(text + "9")    
 
 
 
