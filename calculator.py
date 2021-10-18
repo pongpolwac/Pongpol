@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+from PyQt5 import QtWidgets
 
 class Window(QMainWindow):
   
@@ -129,7 +130,7 @@ class Window(QMainWindow):
 
     def actmul(self):
         text = self.label.text()
-        self.label.setText(text + " * ")
+        self.label.setText(text + " x ")
 
     def actp(self):
         text = self.label.text()
@@ -145,13 +146,33 @@ class Window(QMainWindow):
 
     def actequ(self):
         equation = self.label.text()
-        if "+" in equation:
-            a,b = equation.split("+")  
-            result = float(a) + float(b)  
-            if "." in str(result):
-                self.label.setText(str(result))
-            else:
-                self.label.setText(str(int(result)))   
+        try:
+            if "+" in equation:
+                a,b = equation.split("+")  
+                result = float(a) + float(b)  
+                if result.is_integer():
+                    self.label.setText(str(int(result)))
+                else:    
+                    self.label.setText(str(result))
+            if "-" in equation:
+                a,b = equation.split("-")  
+                result = float(a) - float(b)  
+                if result.is_integer():
+                    self.label.setText(str(int(result)))
+                else:    
+                    self.label.setText(str(result))    
+            if "x" in equation:
+                a,b = equation.split("x")  
+                result = float(a) * float(b)
+                if result < 0 and result.is_integer():
+                    self.label.setText(str(int(result)))
+                if result > 0 and result.is_integer():
+                    self.label.setText(str(int(result)))     
+                else:    
+                    self.label.setText(str(result))            
+        except Exception as e:
+            e="Can only execute 1 order once"
+            self.label.setText(str(e))     
 
 
 App = QApplication(sys.argv)
