@@ -42,6 +42,15 @@ class Window(QMainWindow):
         b2.setGeometry(95, 150, 80, 40)
         b3 = QPushButton("3", self)
         b3.setGeometry(185, 150, 80, 40)
+        bmul = QPushButton("x", self)
+        bmul.setGeometry(275, 250, 80, 40)
+        bmin = QPushButton("-", self)
+        bmin.setGeometry(275, 200, 80, 40)
+        bplus = QPushButton("+", self)
+        bplus.setGeometry(275, 150, 80, 40)
+        pequ = QPushButton("=", self)
+        pequ.setGeometry(275, 300, 80, 40)
+
 
 
 App = QApplication(sys.argv)
