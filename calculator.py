@@ -19,11 +19,15 @@ class Window(QMainWindow):
         self.label.setStyleSheet("border : 2px solid red")
                                  
         bp = QPushButton(".", self)
-        bp.setGeometry(5, 300, 80, 40)
+        bp.setGeometry(6, 300, 80, 40)
         b0 = QPushButton("0", self)
         b0.setGeometry(95, 300, 80, 40)
         be = QPushButton("=", self)
         be.setGeometry(185, 300, 80, 40)
+        b7 = QPushButton("7", self)
+        b7.setGeometry(6, 250, 80, 40)
+        b8 = QPushButton("8", self)
+        b8.setGeometry(95, 250, 80, 40)
 
 
 App = QApplication(sys.argv)
