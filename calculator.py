@@ -7,7 +7,7 @@ class Window(QMainWindow):
   
     def __init__(self):
         super().__init__()
-        self.setGeometry(450, 300, 100, 100)
+        self.setGeometry(450, 300, 350, 350)
         self.setWindowTitle("Pongpol Calculator")
         self.function()
         self.show()
@@ -15,8 +15,8 @@ class Window(QMainWindow):
     def function(self):
         self.label = QLabel(self)
         self.label.setGeometry(5, 5, 350, 70)   
-        b1 = QPushButton("1", self)
-        b2 = QPushButton("2", self)
+        bp = QPushButton(".", self)
+        b0 = QPushButton("0", self)
 
 
 App = QApplication(sys.argv)
