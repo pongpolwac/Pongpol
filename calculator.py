@@ -16,7 +16,9 @@ class Window(QMainWindow):
         self.label = QLabel(self)
         self.label.setGeometry(5, 5, 350, 70)   
         bp = QPushButton(".", self)
+        bp.setGeometry(5, 300, 80, 40)
         b0 = QPushButton("0", self)
+        b0.setGeometry(95, 300, 80, 40)
 
 
 App = QApplication(sys.argv)
