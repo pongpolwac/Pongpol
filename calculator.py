@@ -14,10 +14,9 @@ class Window(QMainWindow):
        
     def function(self):
         self.label = QLabel(self)
-        self.label.setGeometry(6, 4, 350, 70)   
+        self.label.setGeometry(6, 4, 350, 90)   
         self.label.setStyleSheet("QLabel")
-        self.label.setStyleSheet("border : 2px solid red")
-        self.label.setStyleSheet("background : pink")
+        self.label.setStyleSheet("border : 4px solid red")
         self.label.setFont(QFont('Arial', 15))
                                  
         bp = QPushButton(".", self)
